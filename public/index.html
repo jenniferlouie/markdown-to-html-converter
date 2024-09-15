@@ -1,23 +1,43 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="generator" content="GitLab Pages">
-    <title>Plain HTML site using GitLab Pages</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="navbar">
-      <a href="https://pages.gitlab.io/plain-html/">Plain HTML Example</a>
-      <a href="https://gitlab.com/pages/plain-html/">Repository</a>
-      <a href="https://gitlab.com/pages/">Other Examples</a>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Markdown Converter</h1>
+
+    <!-- Clear Button -->
+    <button id="clearBtn">Clear Markdown</button>
+
+    <!-- Markdown Input -->
+    <textarea id="markdownInput" placeholder="Paste your Markdown text here..."></textarea>
+
+    <!-- Output Toggle Buttons -->
+    <div class="toggle-buttons">
+      <button id="formattedBtn">Formatted Text</button>
+      <button id="htmlBtn">HTML</button>
+      <button id="cssBtn">CSS</button>
     </div>
 
-    <h1>Hello World!</h1>
+    <!-- Outputs -->
+    <div id="formattedOutput" class="output" contenteditable="true"></div>
+    <textarea id="htmlOutput" class="output" contenteditable="true" style="display: none;"></textarea>
+    <textarea id="cssOutput" class="output" contenteditable="true" style="display: none;"></textarea>
 
-    <p>
-      This is a simple plain-HTML website on GitLab Pages, without any fancy static site generator.
-    </p>
-  </body>
+    <!-- Copy Buttons -->
+    <button id="copyFormatted">Copy Formatted Text</button>
+    <button id="copyHTML">Copy HTML</button>
+    <button id="copyCSS">Copy CSS</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>
-
