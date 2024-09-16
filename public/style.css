@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
   padding: 20px;
   margin: 0;
   background-color: #f4f4f4;
@@ -16,8 +16,10 @@ textarea,
   height: 150px;
   margin-bottom: 10px;
   padding: 10px;
+  background-color: white;;
   border: 1px solid #ccc;
   border-radius: 5px;
+  overflow-y: auto;
 }
 
 button {
@@ -36,4 +38,39 @@ button:hover {
 
 .toggle-buttons {
   margin-bottom: 10px;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs label {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color: #ddd;
+  margin-right: 5px;
+  border-radius: 4px 4px 0 0;
+  transition: background-color 0.3s ease;
+}
+
+.tabs label:hover {
+  background-color: #ddd;
+}
+
+.tabs input[type="radio"]:checked + label {
+  background-color: #fff;
+  border-bottom: 1px solid transparent;
+}
+
+.monospace {
+  font-family: monospace;
 }

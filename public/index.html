@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Markdown Converter</title>
+  <link href="https://cdn.jsdelivr.net/npm/initialize-css@1.4.0/dist/initialize.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,24 +17,27 @@
     <button id="clearBtn">Clear Markdown</button>
 
     <!-- Markdown Input -->
-    <textarea id="markdownInput" placeholder="Paste your Markdown text here..."></textarea>
+    <textarea id="markdownInput" class="monospace" placeholder="Paste your Markdown text here..."></textarea>
 
-    <!-- Output Toggle Buttons -->
-    <div class="toggle-buttons">
-      <button id="formattedBtn">Formatted Text</button>
-      <button id="htmlBtn">HTML</button>
-      <button id="cssBtn">CSS</button>
+    <div class="tabs">
+      <!-- Output Toggle Buttons -->
+      <input type="radio" id="formattedBtn" name="tab" checked>
+      <label for="formattedBtn">Formatted Text</label>
+  
+      <input type="radio" id="htmlBtn" name="tab">
+      <label for="htmlBtn">HTML</label>
+  
+      <!-- Outputs -->
+      <div id="formattedOutput" class="output" contenteditable="true">
+        <div id="styledContent"></div>
+      </div>
+      <textarea id="htmlOutput" class="output monospace" contenteditable="true" style="display: none;"></textarea>
     </div>
-
-    <!-- Outputs -->
-    <div id="formattedOutput" class="output" contenteditable="true"></div>
-    <textarea id="htmlOutput" class="output" contenteditable="true" style="display: none;"></textarea>
-    <textarea id="cssOutput" class="output" contenteditable="true" style="display: none;"></textarea>
-
+  
     <!-- Copy Buttons -->
     <button id="copyFormatted">Copy Formatted Text</button>
+    <button id="copyUnformatted">Copy Unformatted Text</button>
     <button id="copyHTML">Copy HTML</button>
-    <button id="copyCSS">Copy CSS</button>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
