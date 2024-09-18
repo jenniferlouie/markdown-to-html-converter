@@ -1,8 +1,9 @@
 body {
-  font-family: sans-serif;
+  color: #3E4855;
+  font-family: 'Satoshi', sans-serif;
   padding: 20px;
   margin: 0;
-  background-color: #f4f4f4;
+  background-color: #EEEFE8;
 }
 
 .container {
@@ -22,18 +23,23 @@ textarea,
   overflow-y: auto;
 }
 
+.output {
+  border-top-left-radius: 0px;
+}
+
 button {
   padding: 10px 15px;
+  margin-bottom: 10px;
   margin-right: 10px;
   border: none;
-  background-color: #007bff;
+  background-color: #265C98;
   color: white;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #3E4855;
 }
 
 .toggle-buttons {
@@ -53,10 +59,11 @@ button:hover {
 .tabs label {
   padding: 10px;
   cursor: pointer;
-  background-color: #f0f0f0;
+  color: #74858F;
+  background-color: #EEEFE6;
   border-width: 1px 1px 0 1px;
   border-style: solid;
-  border-color: #ddd;
+  border-color: #ccc;
   margin-right: 5px;
   border-radius: 4px 4px 0 0;
   transition: background-color 0.3s ease;
@@ -67,10 +74,17 @@ button:hover {
 }
 
 .tabs input[type="radio"]:checked + label {
+  color: #3E4855;
   background-color: #fff;
   border-bottom: 1px solid transparent;
 }
 
 .monospace {
   font-family: monospace;
+}
+
+@media screen and (max-width: 768px) {
+  button {
+    display: block;
+  }
 }
