@@ -1,64 +1,32 @@
-Example plain HTML site using GitLab Pages.
+# Markdown Converter
 
-Learn more about GitLab Pages at https://pages.gitlab.io and the official
-documentation https://docs.gitlab.com/ce/user/project/pages/.
+The **Markdown Converter** is a responsive web-based tool designed to convert markdown text into HTML and formatted text. It allows users to input markdown text, view live-formatted results, and edit the HTML to see immediate updates to the formatted output. This tool is ideal for users who want to dynamically preview or edit markdown content and its corresponding HTML.
 
----
+## Features
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+- **Markdown Input**: Paste your markdown text into the input box to instantly view the formatted output.
+- **Formatted Text and HTML Output**: Toggle between different views — formatted text and HTML — to see real-time changes.
+- **Editable HTML Output**: Modify the HTML directly in the output box to apply live updates to the formatted text.
+- **Clear Function**: Clear the markdown input, which also clears the outputs for a fresh start.
+- **Copy Functionality**: Copy the formatted text or HTML with dedicated copy buttons to use them elsewhere (e.g., in Google Docs, Word editors, or other websites).
+- **Responsive Design**: Fully responsive layout for mobile and desktop use.
 
-- [GitLab CI](#gitlab-ci)
-- [GitLab User or Group Pages](#gitlab-user-or-group-pages)
-- [Did you fork this project?](#did-you-fork-this-project)
-- [Troubleshooting](#troubleshooting)
+## How It Works
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+1. **Paste Markdown**: Add markdown text into the input box.
+2. **View Outputs**: View the live result in two different formats:
+    - Formatted Text
+    - HTML
+3. **Toggle Outputs**: Use the tabs (styled as radio buttons) to toggle between different views.
+4. **Copy Outputs**: Use the copy buttons to grab the content from each of the two outputs.
 
-## GitLab CI
+## Usage
 
-This project's static Pages are built by [GitLab CI][ci], following the steps
-defined in [`.gitlab-ci.yml`](.gitlab-ci.yml):
+- **Clear**: Press the clear button to erase all inputs and reset the form.
+- **Paste Markdown**: Paste your markdown in the input box and see live previews in the formatted text output.
+- **Toggle Views**: Switch between formatted text and HTML to inspect or adjust the output.
+- **Copy**: Use the copy buttons to copy the content for use in other projects or applications.
 
-```
-image: busybox
+## License
 
-pages:
-  stage: deploy
-  script:
-  - echo 'Nothing to do...'
-  artifacts:
-    paths:
-    - public
-    expire_in: 1 day
-  rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-```
-
-The above example expects to put all your HTML files in the `public/` directory.
-
-## GitLab User or Group Pages
-
-To use this project as your user/group website, you will need one additional
-step: just rename your project to `namespace.gitlab.io`, where `namespace` is
-your `username` or `groupname`. This can be done by navigating to your
-project's **Settings**.
-
-Read more about [user/group Pages][userpages] and [project Pages][projpages].
-
-## Did you fork this project?
-
-If you forked this project for your own use, please go to your project's
-**Settings** and remove the forking relationship, which won't be necessary
-unless you want to contribute back to the upstream project.
-
-## Troubleshooting
-
-1. CSS is missing! That means that you have wrongly set up the CSS URL in your
-   HTML files. Have a look at the [index.html] for an example.
-
-[ci]: https://about.gitlab.com/gitlab-ci/
-[index.html]: https://gitlab.com/pages/plain-html/blob/master/public/index.html
-[userpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#user-or-group-pages
-[projpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#project-pages
+This project is licensed under the MIT License.
